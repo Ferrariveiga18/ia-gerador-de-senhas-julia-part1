@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senhas da Julia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fundo com corações flutuantes -->
+  <div class="background-hearts">
+    <div class="heart" style="left: 10%; animation-delay: 0s; animation-duration: 8s;">♥</div>
+    <div class="heart" style="left: 25%; animation-delay: 2s; animation-duration: 10s;">♥</div>
+    <div class="heart" style="left: 40%; animation-delay: 4s; animation-duration: 7s;">♥</div>
+    <div class="heart" style="left: 60%; animation-delay: 1s; animation-duration: 9s;">♥</div>
+    <div class="heart" style="left: 75%; animation-delay: 3s; animation-duration: 11s;">♥</div>
+    <div class="heart" style="left: 90%; animation-delay: 5s; animation-duration: 8s;">♥</div>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Senhas da Julia</h1>
+      <p class="subtitle">Gere senhas seguras e fofas para o seu dia a dia ✨</p>
+    </header>
+
+    <section class="card-3d">
+      <!-- Exibição da Senha -->
+      <div class="password-box-3d">
+        <input type="text" id="password-output" readonly value="Ju#2024$Segura" placeholder="Sua senha aparecerá aqui">
+        <button id="btn-copy" class="btn-3d-icon" title="Copiar senha">
+          📋
+        </button>
+      </div>
+
+      <!-- Tamanho da Senha -->
+      <div class="setting-group">
+        <div class="setting-header">
+          <label for="length-slider">Tamanho da senha</label>
+          <span id="length-value" class="badge-3d">12</span>
+        </div>
+        <input type="range" id="length-slider" min="6" max="32" value="12" class="slider-3d">
+      </div>
+
+      <!-- Opções de Caracteres -->
+      <div class="options-grid">
+        <label class="checkbox-3d">
+          <input type="checkbox" id="chk-uppercase" checked>
+          <span class="checkmark-3d"></span>
+          Letras Maiúsculas (A-Z)
+        </label>
+
+        <label class="checkbox-3d">
+          <input type="checkbox" id="chk-lowercase" checked>
+          <span class="checkmark-3d"></span>
+          Letras Minúsculas (a-z)
+        </label>
+
+        <label class="checkbox-3d">
+          <input type="checkbox" id="chk-numbers" checked>
+          <span class="checkmark-3d"></span>
+          Números (0-9)
+        </label>
+
+        <label class="checkbox-3d">
+          <input type="checkbox" id="chk-symbols" checked>
+          <span class="checkmark-3d"></span>
+          Símbolos (!@#$)
+        </label>
+      </div>
+
+      <!-- Força da Senha -->
+      <div class="strength-container">
+        <span>Força da senha:</span>
+        <div class="strength-bar-3d">
+          <div class="strength-fill" id="strength-fill"></div>
+        </div>
+      </div>
+
+      <!-- Botão Gerar -->
+      <button id="btn-generate" class="btn-3d-primary">
+        Gerar Nova Senha 💖
+      </button>
+    </section>
+  </main>
+
+</body>
+</html>
